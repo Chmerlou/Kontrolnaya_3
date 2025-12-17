@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Семестровая работа - Главная</title>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Ссылка-пропуск для клавиатурной навигации -->
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+    <!-- Переключатель темы -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+    </button>
+
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Моё портфолио</h1>
+                    <span class="badge">ЭФБО-03-24</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="container">
+                <button class="nav__toggler" type="button" aria-label="Переключить навигацию" aria-expanded="false">
+                    <span class="nav__toggler-icon"></span>
+                </button>
+                <ul class="nav__list" id="navList">
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="index.html">
+                            <span class="nav__icon">🏠</span>Главная
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/news.html">
+                            <span class="nav__icon">📰</span>Новости
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/practices.html">
+                            <span class="nav__icon">💻</span>Практики
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/goods.html">
+                            <span class="nav__icon">🛒</span>Товары
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="pages/contacts.html">
+                            <span class="nav__icon">📞</span>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Основной контент -->
+        <main id="main" class="main">
+            <!-- Профиль -->
+            <section class="profile">
+                <div class="container">
+                    <div class="card">
+                        <div class="card__body">
+                            <div class="profile__header">
+                                <h2 class="profile__title">
+                                    <span class="icon">👤</span>Информация об авторе
+                                </h2>
+                                <figure class="hero-image">
+                                    <img class="profile__photo hero-photo" src="images/photo.png"
+                                         width="200" height="200" alt="Портрет студента" fetchpriority="high">
+                                </figure>
+                                <h3 class="profile__name">Чемоданов Даниил Андреевич</h3>
+                                <p class="profile__group">
+                                    <span class="icon">📚</span>ЭФБО-03-24
+                                </p>
+                                <div class="badges">
+                                    <span class="badge badge--primary">HTML/CSS</span>
+                                    <span class="badge badge--success">JavaScript</span>
+                                    <span class="badge badge--info">React</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Обо мне -->
+            <section class="about">
+                <div class="container">
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 class="about__title">
+                                <span class="icon">👤</span>Обо мне
+                            </h2>
+                        </div>
+                        <div class="card__body">
+                            <p class="about__text">
+                                Обо мне: Люблю играть в cs 2 и смотреть сериальчики
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Навыки -->
+            <section class="skills">
+                <div class="container">
+                    <div class="card">
+                        <div class="card__header">
+                            <h2 class="skills__title">
+                                <span class="icon">🛠️</span>Мои навыки
+                            </h2>
+                        </div>
+                        <div class="card__body">
+                            <div class="skills__grid">
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill__name">HTML</span>
+                                        <span class="skill__percent">90%</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress__bar progress__bar--primary" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill__name">CSS</span>
+                                        <span class="skill__percent">85%</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress__bar progress__bar--info" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-item__header">
+                                        <span class="skill__name">JavaScript</span>
+                                        <span class="skill__percent">75%</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress__bar progress__bar--success" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="badges">
+                                <span class="badge badge--primary">HTML</span>
+                                <span class="badge badge--info">CSS</span>
+                                <span class="badge badge--success">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Проекты / Опыт работы -->
+            <section class="experience">
+                <div class="container">
+                    <h2 class="section__title">
+                        <span class="icon">📁</span>Мой опыт работы
+                    </h2>
+                    <div class="experience-area">
+                        <div class="experience-grid">
+                            <article class="experience-card card">
+                                <div class="card__body">
+                                    <h3 class="experience-card__title">
+                                        <span class="icon">💼</span>Опыт 1
+                                    </h3>
+                                    <p class="experience-card__desc">Был автомойщиком</p>
+                                </div>
+                            </article>
+                            <article class="experience-card card">
+                                <div class="card__body">
+                                    <h3 class="experience-card__title">
+                                        <span class="icon">💼</span>Опыт 2
+                                    </h3>
+                                    <p class="experience-card__desc">Был грузчиком</p>
+                                </div>
+                            </article>
+                            <article class="experience-card card">
+                                <div class="card__body">
+                                    <h3 class="experience-card__title">
+                                        <span class="icon">💼</span>Опыт 3
+                                    </h3>
+                                    <p class="experience-card__desc">Был инструктором в веревочном парке</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <div class="container">
+                <p class="footer__text">&copy; 2025 Мой сайт</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Переключение темы
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+        const htmlElement = document.documentElement;
+        
+        // Проверяем сохраненную тему
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '☀️';
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+            themeIcon.textContent = '🌙';
+        }
+
+        // Обработчик клика на переключатель темы
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Мобильное меню
+        const navToggler = document.querySelector('.nav__toggler');
+        const navList = document.getElementById('navList');
+        
+        if (navToggler && navList) {
+            navToggler.addEventListener('click', function() {
+                const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
+                navToggler.setAttribute('aria-expanded', !isExpanded);
+                navList.classList.toggle('nav__list--open');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Каталог товаров с демонстрацией техник адаптивных изображений. Веб-камеры, клавиатуры, наушники и другие товары.">
+    <title>Товары - Семестровая работа</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Ссылка-пропуск для клавиатурной навигации -->
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+    <!-- Переключатель темы -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+    </button>
+
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Товары</h1>
+                    <span class="badge">ЭФБО-03-24</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="container">
+                <button class="nav__toggler" type="button" aria-label="Переключить навигацию" aria-expanded="false">
+                    <span class="nav__toggler-icon"></span>
+                </button>
+                <ul class="nav__list" id="navList">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">
+                            <span class="nav__icon">🏠</span>Главная
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="news.html">
+                            <span class="nav__icon">📰</span>Новости
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="practices.html">
+                            <span class="nav__icon">💻</span>Практики
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="goods.html">
+                            <span class="nav__icon">🛒</span>Товары
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="contacts.html">
+                            <span class="nav__icon">📞</span>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main" class="main">
+            <section class="products">
+                <div class="container">
+                    <h2 class="products__title">
+                        <span class="icon">📦</span>Каталог товаров
+                    </h2>
+                    
+                    <div class="techniques-info">
+                        <p><strong>Используемые техники адаптивных изображений:</strong></p>
+                        <ul>
+                            <li><span class="technique-badge technique-badge--1">Техника 1</span> - Базовое адаптивное изображение (width: 100%, height: auto)</li>
+                            <li><span class="technique-badge technique-badge--2">Техника 2</span> - Picture element с форматами (WebP/JPEG)</li>
+                            <li><span class="technique-badge technique-badge--3">Техника 3</span> - Разные изображения для разных экранов (media queries)</li>
+                        </ul>
+                    </div>
+
+                    <div class="products-area">
+                        <div class="products-grid">
+                            <!-- ТЕХНИКА 1: Базовое адаптивное изображение -->
+                            <article class="product-card product-card--discount card" data-product="1">
+                                <span class="badge badge--danger product-card__badge">Скидка</span>
+                                <span class="technique-label technique-label--1">Техника 1</span>
+                                <!-- Базовое адаптивное изображение: width: 100%, height: auto -->
+                                <img class="product-card__image product-card__image--responsive" 
+                                     src="../images/goods1.jpg" 
+                                     srcset="../images/goods1.jpg 300w,
+                                             ../images/goods1.jpg 600w,
+                                             ../images/goods1.jpg 900w"
+                                     sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+                                     width="300" height="250" 
+                                     alt="Товар 1 - Веб-камера" 
+                                     loading="lazy">
+                                <div class="card__body">
+                                    <h3 class="product-card__name">Товар 1 - Веб-камера</h3>
+                                    <p class="product-card__price">
+                                        <span class="product-card__price--old">3 000 руб.</span>
+                                        <span class="product-card__price--new">2 500 руб.</span>
+                                    </p>
+                                </div>
+                            </article>
+
+                            <!-- ТЕХНИКА 2: Picture element с форматами -->
+                            <article class="product-card card" data-product="2">
+                                <span class="technique-label technique-label--2">Техника 2</span>
+                                <!-- Picture element: выбор формата (WebP/JPEG) -->
+                                <picture>
+                                    <!-- WebP для современных браузеров (если будет доступен) -->
+                                    <source srcset="../images/goods1.jpg 300w,
+                                                    ../images/goods1.jpg 600w,
+                                                    ../images/goods1.jpg 900w"
+                                            sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+                                            type="image/jpeg">
+                                    <!-- JPEG фолбэк -->
+                                    <img class="product-card__image" 
+                                         src="../images/goods1.jpg"
+                                         srcset="../images/goods1.jpg 300w,
+                                                 ../images/goods1.jpg 600w,
+                                                 ../images/goods1.jpg 900w"
+                                         sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+                                         width="300" height="250" 
+                                         alt="Товар 2 - Клавиатура" 
+                                         loading="lazy">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="product-card__name">Товар 2 - Клавиатура</h3>
+                                    <p class="product-card__price">
+                                        <span class="product-card__price--new">1 800 руб.</span>
+                                    </p>
+                                </div>
+                            </article>
+
+                            <!-- ТЕХНИКА 3: Разные изображения для разных экранов -->
+                            <article class="product-card product-card--discount card" data-product="3">
+                                <span class="badge badge--danger product-card__badge">Скидка</span>
+                                <span class="technique-label technique-label--3">Техника 3</span>
+                                <!-- Разные изображения для разных размеров экрана -->
+                                <picture>
+                                    <!-- Большое изображение для десктопов (1200px+) -->
+                                    <source media="(min-width: 1200px)" 
+                                            srcset="../images/goods1.jpg 300w,
+                                                    ../images/goods1.jpg 600w"
+                                            sizes="33vw">
+                                    <!-- Среднее для планшетов (768px-1199px) -->
+                                    <source media="(min-width: 768px)" 
+                                            srcset="../images/goods2.jpg 300w,
+                                                    ../images/goods2.jpg 600w"
+                                            sizes="50vw">
+                                    <!-- Маленькое для мобильных (до 767px) -->
+                                    <img class="product-card__image" 
+                                         src="../images/goods3.jpg"
+                                         srcset="../images/goods3.jpg 300w,
+                                                 ../images/goods3.jpg 600w"
+                                         sizes="100vw"
+                                         width="300" height="250" 
+                                         alt="Товар 3 - Наушники" 
+                                         loading="lazy">
+                                </picture>
+                                <div class="card__body">
+                                    <h3 class="product-card__name">Товар 3 - Наушники</h3>
+                                    <p class="product-card__price">
+                                        <span class="product-card__price--old">4 000 руб.</span>
+                                        <span class="product-card__price--new">3 200 руб.</span>
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="product-card product-card--discount card" data-product="4">
+                                <span class="badge badge--danger product-card__badge">Скидка</span>
+                                <div class="product-card__gallery" id="galleryProduct4">
+                                    <div class="product-card__gallery-item product-card__gallery-item--active">
+                                        <picture>
+                                            <img src="../images/1.jpg" class="product-card__image"
+                                                 srcset="../images/1.jpg 300w,
+                                                         ../images/1.jpg 600w,
+                                                         ../images/1.jpg 900w"
+                                                 sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+                                                 width="300" height="250" alt="Товар 4 - Вид 1" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-item">
+                                        <picture>
+                                            <img src="../images/2.jpg" class="product-card__image"
+                                                 srcset="../images/2.jpg 300w,
+                                                         ../images/2.jpg 600w,
+                                                         ../images/2.jpg 900w"
+                                                 sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+                                                 width="300" height="250" alt="Товар 4 - Вид 2" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <div class="product-card__gallery-item">
+                                        <picture>
+                                            <img src="../images/3.jpg" class="product-card__image"
+                                                 srcset="../images/3.jpg 300w,
+                                                         ../images/3.jpg 600w,
+                                                         ../images/3.jpg 900w"
+                                                 sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 33vw"
+                                                 width="300" height="250" alt="Товар 4 - Вид 3" loading="lazy">
+                                        </picture>
+                                    </div>
+                                    <button class="product-card__gallery-prev" aria-label="Предыдущее изображение">‹</button>
+                                    <button class="product-card__gallery-next" aria-label="Следующее изображение">›</button>
+                                </div>
+                                <div class="card__body">
+                                    <h3 class="product-card__name">Товар 4 - сдать кр2</h3>
+                                    <p class="product-card__price">
+                                        <a href="#" class="button">Много благодарности</a>
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer__text">&copy; 2025 Мой сайт</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Переключение темы
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+        const htmlElement = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '☀️';
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+            themeIcon.textContent = '🌙';
+        }
+
+        themeToggle.addEventListener('click', function () {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Мобильное меню
+        const navToggler = document.querySelector('.nav__toggler');
+        const navList = document.getElementById('navList');
+        
+        if (navToggler && navList) {
+            navToggler.addEventListener('click', function() {
+                const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
+                navToggler.setAttribute('aria-expanded', !isExpanded);
+                navList.classList.toggle('nav__list--open');
+            });
+        }
+
+        // Обработка состояния выбранного товара
+        const productCards = document.querySelectorAll('.product-card');
+        productCards.forEach(card => {
+            card.addEventListener('click', function () {
+                productCards.forEach(c => c.classList.remove('product-card--selected'));
+                this.classList.add('product-card--selected');
+            });
+        });
+
+        // Галерея товара
+        const gallery = document.getElementById('galleryProduct4');
+        if (gallery) {
+            const items = gallery.querySelectorAll('.product-card__gallery-item');
+            const prevBtn = gallery.querySelector('.product-card__gallery-prev');
+            const nextBtn = gallery.querySelector('.product-card__gallery-next');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                items.forEach((item, i) => {
+                    item.classList.toggle('product-card__gallery-item--active', i === index);
+                });
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + items.length) % items.length;
+                    showSlide(currentIndex);
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % items.length;
+                    showSlide(currentIndex);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

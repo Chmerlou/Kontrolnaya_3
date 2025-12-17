@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Практические задания по веб-разработке: основы HTML, работа с формами, CSS, JavaScript и адаптивный дизайн.">
+    <title>Практики - Семестровая работа</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Ссылка-пропуск для клавиатурной навигации -->
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+    <!-- Переключатель темы -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+    </button>
+
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Практики</h1>
+                    <span class="badge">ЭФБО-03-24</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="container">
+                <button class="nav__toggler" type="button" aria-label="Переключить навигацию" aria-expanded="false">
+                    <span class="nav__toggler-icon"></span>
+                </button>
+                <ul class="nav__list" id="navList">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">
+                            <span class="nav__icon">🏠</span>Главная
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="news.html">
+                            <span class="nav__icon">📰</span>Новости
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="practices.html">
+                            <span class="nav__icon">💻</span>Практики
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="goods.html">
+                            <span class="nav__icon">🛒</span>Товары
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="contacts.html">
+                            <span class="nav__icon">📞</span>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main" class="main">
+            <section class="practices">
+                <div class="container">
+                    <h2 class="practices__title">Практические задания</h2>
+                    
+                    <div class="practices-area">
+                        <div class="practices-grid">
+                            <article class="practice card">
+                                <div class="card__body">
+                                    <h3 class="practice__title">Практика 1: Основы HTML</h3>
+                                    <p class="practice__meta"><strong>Описание:</strong> Изучение базовых тегов и структуры HTML документа</p>
+                                    <p class="practice__status"><strong>Статус:</strong> Выполнено</p>
+                                </div>
+                            </article>
+                            
+                            <article class="practice card">
+                                <div class="card__body">
+                                    <h3 class="practice__title">Практика 2: Работа с формами</h3>
+                                    <p class="practice__meta"><strong>Описание:</strong> Создание и стилизация HTML форм</p>
+                                    <p class="practice__status"><strong>Статус:</strong> В процессе</p>
+                                </div>
+                            </article>
+                            
+                            <article class="practice card">
+                                <div class="card__body">
+                                    <h3 class="practice__title">Практика 3: CSS основы</h3>
+                                    <p class="practice__meta"><strong>Описание:</strong> Изучение каскадных таблиц стилей</p>
+                                    <p class="practice__status"><strong>Статус:</strong> Не начато</p>
+                                </div>
+                            </article>
+                            
+                            <article class="practice card">
+                                <div class="card__body">
+                                    <h3 class="practice__title">Практика 4: JavaScript базовый</h3>
+                                    <p class="practice__meta"><strong>Описание:</strong> Основы программирования на JavaScript</p>
+                                    <p class="practice__status"><strong>Статус:</strong> Не начато</p>
+                                </div>
+                            </article>
+                            
+                            <article class="practice card">
+                                <div class="card__body">
+                                    <h3 class="practice__title">Практика 5: Адаптивный дизайн</h3>
+                                    <p class="practice__meta"><strong>Описание:</strong> Создание сайтов для разных устройств</p>
+                                    <p class="practice__status"><strong>Статус:</strong> Не начато</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer__text">&copy; 2025 Мой сайт</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Переключение темы
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+        const htmlElement = document.documentElement;
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '☀️';
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+            themeIcon.textContent = '🌙';
+        }
+
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Мобильное меню
+        const navToggler = document.querySelector('.nav__toggler');
+        const navList = document.getElementById('navList');
+        
+        if (navToggler && navList) {
+            navToggler.addEventListener('click', function() {
+                const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
+                navToggler.setAttribute('aria-expanded', !isExpanded);
+                navList.classList.toggle('nav__list--open');
+            });
+        }
+    </script>
+</body>
+</html>

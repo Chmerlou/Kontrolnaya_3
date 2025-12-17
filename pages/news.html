@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Новости проекта: запуск нового сайта, планы на будущее, новые практические задания и обновления.">
+    <title>Новости - Семестровая работа</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Ссылка-пропуск для клавиатурной навигации -->
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+    <!-- Переключатель темы -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+    </button>
+
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Новости</h1>
+                    <span class="badge">ЭФБО-03-24</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="container">
+                <button class="nav__toggler" type="button" aria-label="Переключить навигацию" aria-expanded="false">
+                    <span class="nav__toggler-icon"></span>
+                </button>
+                <ul class="nav__list" id="navList">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">
+                            <span class="nav__icon">🏠</span>Главная
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="news.html">
+                            <span class="nav__icon">📰</span>Новости
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="practices.html">
+                            <span class="nav__icon">💻</span>Практики
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="goods.html">
+                            <span class="nav__icon">🛒</span>Товары
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="contacts.html">
+                            <span class="nav__icon">📞</span>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main" class="main">
+            <section class="news">
+                <div class="container">
+                    <h2 class="news__title">Новости проекта</h2>
+                    
+                    <div class="news-area">
+                        <div class="news-grid">
+                            <article class="news-card card">
+                                <div class="card__body">
+                                    <h3 class="news-card__title">Запуск нового сайта</h3>
+                                    <p class="news-card__meta"><strong>Дата публикации:</strong> 01.01.2025 12:00 | <strong>Автор:</strong> Чемоданов Д.А</p>
+                                    <p class="news-card__text">Сегодня мы играем каточку на мираже.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card card">
+                                <div class="card__body">
+                                    <h3 class="news-card__title">Планы на будущее</h3>
+                                    <p class="news-card__meta"><strong>Дата публикации:</strong> 02.01.2025 14:30 | <strong>Автор:</strong> Чемоданов Д.А</p>
+                                    <p class="news-card__text">В ближайших планах - сыграть каточку на дасте.</p>
+                                </div>
+                            </article>
+
+                            <article class="news-card card">
+                                <div class="card__body">
+                                    <h3 class="news-card__title">Новые практические задания</h3>
+                                    <p class="news-card__meta"><strong>Дата публикации:</strong> 03.01.2025 10:15 | <strong>Автор:</strong> Чемоданов Д.А</p>
+                                    <p class="news-card__text">На следующей неделе будут каточки на ньюке.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p class="footer__text">&copy; 2025 Мой сайт</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Переключение темы
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+        const htmlElement = document.documentElement;
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '☀️';
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+            themeIcon.textContent = '🌙';
+        }
+
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Мобильное меню
+        const navToggler = document.querySelector('.nav__toggler');
+        const navList = document.getElementById('navList');
+        
+        if (navToggler && navList) {
+            navToggler.addEventListener('click', function() {
+                const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
+                navToggler.setAttribute('aria-expanded', !isExpanded);
+                navList.classList.toggle('nav__list--open');
+            });
+        }
+    </script>
+</body>
+</html>

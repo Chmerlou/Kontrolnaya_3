@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Контактная информация и форма обратной связи. Свяжитесь с нами по телефону, email или через форму обратной связи.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="contacts.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Контакты - Семестровая работа">
+    <meta property="og:description" content="Контактная информация и форма обратной связи. Свяжитесь с нами по телефону, email или через форму обратной связи.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Контакты - Семестровая работа">
+    <meta name="twitter:description" content="Контактная информация и форма обратной связи. Свяжитесь с нами по телефону, email или через форму обратной связи.">
+    
+    <title>Контакты - Семестровая работа</title>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Контакты",
+      "description": "Контактная информация и форма обратной связи",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Семестровая работа",
+        "email": "rpinrrpopo@gmail.com",
+        "telephone": "+7-919-436-01-15",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. 11-я Парковая, д. 36",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        }
+      }
+    }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Ссылка-пропуск для клавиатурной навигации -->
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+    <!-- Переключатель темы -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+    </button>
+
+    <!-- Основной контейнер -->
+    <div class="page">
+        <!-- Шапка -->
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header__content">
+                    <h1 class="header__title">Контакты</h1>
+                    <span class="badge" aria-label="Группа ЭФБО-03-24">ЭФБО-03-24</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="container">
+                <button class="nav__toggler" type="button" aria-label="Переключить навигацию" aria-expanded="false" aria-controls="navList">
+                    <span class="nav__toggler-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Меню</span>
+                </button>
+                <ul class="nav__list" id="navList">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">
+                            <span class="nav__icon" aria-hidden="true">🏠</span>Главная
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="news.html">
+                            <span class="nav__icon" aria-hidden="true">📰</span>Новости
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="practices.html">
+                            <span class="nav__icon" aria-hidden="true">💻</span>Практики
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="goods.html">
+                            <span class="nav__icon" aria-hidden="true">🛒</span>Товары
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="contacts.html" aria-current="page">
+                            <span class="nav__icon" aria-hidden="true">📞</span>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main" class="main" role="main">
+            <section class="contacts">
+                <div class="container">
+                    <h2 class="contacts__title">Наши контакты</h2>
+
+                <article class="contact-info">
+                    <h3>Электронная почта</h3>
+                    <p>Адрес электронной почты: <a href="mailto:rpinrrpopo@gmail.com" aria-label="Отправить письмо на rpinrrpopo@gmail.com">rpinrrpopo@gmail.com</a></p>
+                </article>
+
+                <article class="contact-info">
+                    <h3>Физический адрес</h3>
+                    <address>г. Москва, ул. 11-я Парковая, д. 36</address>
+                </article>
+
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <h3 class="contact-item__title">Телефон</h3>
+                        <p class="contact-item__value">
+                            <a href="tel:+79194360115" aria-label="Позвонить по номеру +7 919 436-01-15">+7 (919) 436-01-15</a>
+                        </p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="contact-item__title">Время работы</h3>
+                        <p class="contact-item__value">Работаем только по Средам, Субботам и Сегодня</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 class="contact-item__title">Социальные сети</h3>
+                        <p class="contact-item__value">VK, Telegram, WhatsApp</p>
+                    </div>
+                </div>
+
+                    <button class="contact-button" 
+                            type="button"
+                            onclick="openContactModal()" 
+                            aria-label="Открыть форму обратной связи">
+                        Связаться с нами
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <p class="footer__text">&copy; 2025 Мой сайт</p>
+            </div>
+        </footer>
+
+        <!-- Модальное окно для формы обратной связи -->
+        <dialog id="contactModal" 
+                role="dialog" 
+                aria-modal="true" 
+                aria-labelledby="modal-title"
+                tabindex="-1">
+            <div class="modal__header">
+                <h2 class="modal__title" id="modal-title">Форма обратной связи</h2>
+                <button class="modal__close" 
+                        onclick="closeContactModal()" 
+                        aria-label="Закрыть диалоговое окно"
+                        type="button">
+                    <span aria-hidden="true">×</span>
+                    <span class="visually-hidden">Закрыть</span>
+                </button>
+            </div>
+
+            <div class="modal__content">
+                <form id="feedbackForm" method="dialog" novalidate>
+                    <fieldset>
+                        <legend class="visually-hidden">Персональная информация</legend>
+                        
+                        <div class="form-group">
+                            <label class="form-group__label" for="name">
+                                Имя <span class="required" aria-label="обязательное поле">*</span>
+                            </label>
+                            <input type="text" 
+                                   id="name" 
+                                   name="name" 
+                                   required 
+                                   aria-required="true"
+                                   autocomplete="name"
+                                   placeholder="Введите ваше имя"
+                                   aria-describedby="name-hint name-error"
+                                   aria-invalid="false">
+                            <small id="name-hint" class="visually-hidden">Введите ваше полное имя</small>
+                            <span id="name-error" class="validation-message" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-group__label" for="phone">
+                                Телефон <span class="required" aria-label="обязательное поле">*</span>
+                            </label>
+                            <input type="tel" 
+                                   id="phone" 
+                                   name="phone" 
+                                   required 
+                                   aria-required="true"
+                                   autocomplete="tel"
+                                   pattern="^(\+7|8)\s\d{3}\s\d{3}\s\d{2}\s\d{2}$" 
+                                   placeholder="+7 XXX XXX XX XX"
+                                   title="Введите российский номер телефона: 8 XXX XXX XX XX или +7 XXX XXX XX XX"
+                                   aria-describedby="phone-hint phone-error"
+                                   aria-invalid="false">
+                            <small id="phone-hint" class="visually-hidden">Введите российский номер телефона в формате: 8 XXX XXX XX XX или +7 XXX XXX XX XX</small>
+                            <span id="phone-error" class="validation-message" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-group__label" for="email">
+                                Электронная почта <span class="required" aria-label="обязательное поле">*</span>
+                            </label>
+                            <input type="email" 
+                                   id="email" 
+                                   name="email" 
+                                   required 
+                                   aria-required="true"
+                                   autocomplete="email"
+                                   placeholder="example@mail.ru"
+                                   aria-describedby="email-hint email-error"
+                                   aria-invalid="false">
+                            <small id="email-hint" class="visually-hidden">Мы пришлём ответ на этот адрес</small>
+                            <span id="email-error" class="validation-message" role="alert" aria-live="polite"></span>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="visually-hidden">Детали обращения</legend>
+                        
+                        <div class="form-group">
+                            <label class="form-group__label" for="category">
+                                Категория обращения <span class="required" aria-label="обязательное поле">*</span>
+                            </label>
+                            <select id="category" 
+                                    name="category" 
+                                    required 
+                                    aria-required="true"
+                                    aria-describedby="category-hint category-error"
+                                    aria-invalid="false">
+                                <option value="">Выберите категорию</option>
+                                <option value="technical">Техническая поддержка</option>
+                                <option value="commercial">Коммерческое предложение</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="complaint">Жалоба</option>
+                                <option value="suggestion">Предложение</option>
+                                <option value="other">Другое</option>
+                            </select>
+                            <small id="category-hint" class="visually-hidden">Выберите наиболее подходящую категорию для вашего обращения</small>
+                            <span id="category-error" class="validation-message" role="alert" aria-live="polite"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-group__label" for="message">
+                                Текст обращения <span class="required" aria-label="обязательное поле">*</span>
+                            </label>
+                            <textarea id="message" 
+                                      name="message" 
+                                      required 
+                                      aria-required="true"
+                                      autocomplete="off"
+                                      placeholder="Опишите вашу проблему или вопрос..."
+                                      aria-describedby="message-hint message-error"
+                                      aria-invalid="false"></textarea>
+                            <small id="message-hint" class="visually-hidden">Опишите подробно вашу проблему или вопрос</small>
+                            <span id="message-error" class="validation-message" role="alert" aria-live="polite"></span>
+                        </div>
+                    </fieldset>
+
+                    <div class="modal__actions">
+                        <button type="button" 
+                                class="btn btn--secondary" 
+                                onclick="closeContactModal()"
+                                aria-label="Отменить отправку формы и закрыть диалоговое окно">
+                            Отмена
+                        </button>
+                        <button type="submit" 
+                                class="btn btn--primary" 
+                                onclick="submitForm(event)"
+                                aria-label="Отправить форму обратной связи">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+    </div>
+
+    <script>
+        // Переключение темы
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
+        const htmlElement = document.documentElement;
+        
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            htmlElement.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '☀️';
+        } else {
+            htmlElement.setAttribute('data-theme', 'light');
+            themeIcon.textContent = '🌙';
+        }
+
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Функция для установки ошибки поля
+        function setFieldError(fieldId, errorId, message) {
+            const field = document.getElementById(fieldId);
+            const error = document.getElementById(errorId);
+            
+            if (field && error) {
+                field.setAttribute('aria-invalid', 'true');
+                error.textContent = message;
+                error.style.display = 'block';
+                error.style.color = 'var(--color-error, #e74c3c)';
+            }
+        }
+
+        // Функция для очистки ошибки поля
+        function clearFieldError(fieldId, errorId) {
+            const field = document.getElementById(fieldId);
+            const error = document.getElementById(errorId);
+            
+            if (field && error) {
+                field.setAttribute('aria-invalid', 'false');
+                error.textContent = '';
+                error.style.display = 'none';
+            }
+        }
+
+        // Функция для валидации российского номера телефона
+        function validatePhone(phone) {
+            const phoneRegex = /^(\+7|8)\s\d{3}\s\d{3}\s\d{2}\s\d{2}$/;
+            
+            if (!phoneRegex.test(phone)) {
+                return false;
+            }
+            
+            const cleaned = phone.replace(/\D/g, '');
+            
+            if (cleaned.length !== 11) {
+                return false;
+            }
+            
+            const numberOnly = cleaned.replace(/^(\+7|8)/, '');
+            const firstDigit = numberOnly[0];
+            
+            if (firstDigit < '3' || firstDigit > '9') {
+                return false;
+            }
+            
+            return true;
+        }
+
+        // Форматирование номера телефона при вводе
+        function formatPhone(input) {
+            let value = input.value.replace(/\D/g, '');
+            
+            if (value.length > 11) {
+                value = value.substring(0, 11);
+            }
+            
+            if (value.length === 0) {
+                input.value = '';
+                document.getElementById('phone-error').style.display = 'none';
+                input.setCustomValidity('');
+                return;
+            }
+            
+            let prefix = '';
+            let digits = '';
+            
+            if (value.startsWith('8')) {
+                prefix = '8';
+                digits = value.substring(1);
+            } else if (value.startsWith('7')) {
+                prefix = '+7';
+                digits = value.substring(1);
+            } else {
+                prefix = '8';
+                digits = value;
+            }
+            
+            let formatted = prefix;
+            
+            if (digits.length > 0) {
+                formatted += ' ' + digits.substring(0, 3);
+            }
+            if (digits.length > 3) {
+                formatted += ' ' + digits.substring(3, 6);
+            }
+            if (digits.length > 6) {
+                formatted += ' ' + digits.substring(6, 8);
+            }
+            if (digits.length > 8) {
+                formatted += ' ' + digits.substring(8, 10);
+            }
+            
+            input.value = formatted;
+            
+            const phoneValue = formatted.replace(/\D/g, '');
+            
+            if (phoneValue.length > 0 && phoneValue.length < 11) {
+                input.setCustomValidity('Номер телефона должен содержать 11 цифр');
+                input.setAttribute('aria-invalid', 'true');
+                setFieldError('phone', 'phone-error', 'Номер должен содержать 11 цифр. Формат: 8 XXX XXX XX XX');
+            } else if (phoneValue.length === 11) {
+                if (validatePhone(formatted)) {
+                    input.setCustomValidity('');
+                    input.setAttribute('aria-invalid', 'false');
+                    clearFieldError('phone', 'phone-error');
+                } else {
+                    input.setCustomValidity('Неверный формат номера телефона');
+                    input.setAttribute('aria-invalid', 'true');
+                    setFieldError('phone', 'phone-error', 'Неверный формат. Используйте: 8 XXX XXX XX XX или +7 XXX XXX XX XX');
+                }
+            } else {
+                input.setCustomValidity('');
+                input.setAttribute('aria-invalid', 'false');
+                clearFieldError('phone', 'phone-error');
+            }
+        }
+
+        // Инициализация валидации телефона
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('feedbackForm');
+            const phoneInput = document.getElementById('phone');
+            
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function() {
+                    formatPhone(this);
+                });
+                
+                phoneInput.addEventListener('blur', function() {
+                    const value = this.value.replace(/\D/g, '');
+                    if (value.length > 0 && !validatePhone(this.value)) {
+                        this.setCustomValidity('Неверный формат номера телефона');
+                        setFieldError('phone', 'phone-error', 'Неверный формат. Используйте: 8 XXX XXX XX XX или +7 XXX XXX XX XX');
+                    } else if (value.length === 11 && validatePhone(this.value)) {
+                        this.setCustomValidity('');
+                        clearFieldError('phone', 'phone-error');
+                    }
+                });
+            }
+            
+            // Валидация при вводе для всех полей
+            if (form) {
+                form.querySelectorAll('input, select, textarea').forEach(field => {
+                    field.addEventListener('blur', function() {
+                        if (this.validity.valid) {
+                            this.setAttribute('aria-invalid', 'false');
+                            const errorId = `${this.id}-error`;
+                            clearFieldError(this.id, errorId);
+                        }
+                    });
+                    
+                    field.addEventListener('input', function() {
+                        if (this.validity.valid && this.getAttribute('aria-invalid') === 'true') {
+                            this.setAttribute('aria-invalid', 'false');
+                            const errorId = `${this.id}-error`;
+                            clearFieldError(this.id, errorId);
+                        }
+                    });
+                });
+            }
+        });
+
+        // Управление модальным окном
+        let previousActiveElement;
+        const contactModal = document.getElementById('contactModal');
+        const mainContent = document.querySelector('main');
+
+        function openContactModal() {
+            // Запоминаем активный элемент для возврата фокуса
+            previousActiveElement = document.activeElement;
+            
+            // Показываем модалку
+            contactModal.showModal();
+            
+            // Скрываем основной контент от скринридера
+            if (mainContent) {
+                mainContent.setAttribute('aria-hidden', 'true');
+            }
+            document.querySelectorAll('header, nav, footer').forEach(el => {
+                el.setAttribute('aria-hidden', 'true');
+            });
+            
+            // Фокусируемся на модалке
+            contactModal.focus();
+            
+            // Добавляем обработчик Escape
+            document.addEventListener('keydown', handleModalEscape);
+        }
+
+        function closeContactModal() {
+            // Скрываем модалку
+            contactModal.close();
+            
+            // Возвращаем видимость основному контенту
+            if (mainContent) {
+                mainContent.removeAttribute('aria-hidden');
+            }
+            document.querySelectorAll('[aria-hidden="true"]').forEach(el => {
+                if (el !== contactModal) {
+                    el.removeAttribute('aria-hidden');
+                }
+            });
+            
+            // Возвращаем фокус на предыдущий элемент
+            if (previousActiveElement) {
+                previousActiveElement.focus();
+            }
+            
+            // Убираем обработчик Escape
+            document.removeEventListener('keydown', handleModalEscape);
+        }
+
+        function handleModalEscape(event) {
+            if (event.key === 'Escape' && contactModal.open) {
+                closeContactModal();
+            }
+        }
+
+        // Захват фокуса внутри модального окна
+        contactModal.addEventListener('keydown', function(event) {
+            if (event.key === 'Tab') {
+                const focusableElements = contactModal.querySelectorAll(
+                    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+                );
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+
+                if (event.shiftKey && document.activeElement === firstElement) {
+                    event.preventDefault();
+                    lastElement.focus();
+                } else if (!event.shiftKey && document.activeElement === lastElement) {
+                    event.preventDefault();
+                    firstElement.focus();
+                }
+            }
+        });
+
+        // Закрытие модального окна по клику на фон
+        contactModal.addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeContactModal();
+            }
+        });
+
+        // Функция для отправки формы
+        function submitForm(event) {
+            if (event) {
+                event.preventDefault();
+            }
+            
+            const form = document.getElementById('feedbackForm');
+            const formData = new FormData(form);
+            const phoneInput = document.getElementById('phone');
+            let hasErrors = false;
+
+            // Очистка предыдущих ошибок
+            ['name', 'phone', 'email', 'category', 'message'].forEach(fieldId => {
+                clearFieldError(fieldId, `${fieldId}-error`);
+            });
+
+            // Валидация телефона
+            const phoneValue = phoneInput.value.replace(/\D/g, '');
+            if (phoneValue.length !== 11 || !validatePhone(phoneInput.value)) {
+                setFieldError('phone', 'phone-error', 'Введите корректный номер в формате: 8 XXX XXX XX XX или +7 XXX XXX XX XX');
+                phoneInput.focus();
+                hasErrors = true;
+            }
+
+            // Проверка всех обязательных полей
+            if (!form.checkValidity()) {
+                form.querySelectorAll('[required]').forEach(field => {
+                    if (!field.validity.valid) {
+                        const fieldId = field.id;
+                        const errorId = `${fieldId}-error`;
+                        let errorMessage = '';
+                        
+                        if (field.validity.valueMissing) {
+                            errorMessage = 'Это поле обязательно для заполнения';
+                        } else if (field.validity.typeMismatch) {
+                            errorMessage = 'Неверный формат данных';
+                        } else if (field.validity.patternMismatch) {
+                            errorMessage = 'Неверный формат';
+                        }
+                        
+                        if (errorMessage) {
+                            setFieldError(fieldId, errorId, errorMessage);
+                        }
+                    }
+                });
+                hasErrors = true;
+            }
+
+            if (hasErrors) {
+                // Фокусируемся на первом поле с ошибкой
+                const firstError = form.querySelector('[aria-invalid="true"]');
+                if (firstError) {
+                    firstError.focus();
+                }
+                return;
+            }
+
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone'),
+                email: formData.get('email'),
+                category: formData.get('category'),
+                message: formData.get('message')
+            };
+
+            console.log('Данные формы:', data);
+
+            // Создаем или получаем aria-live регион для успешного сообщения
+            let successRegion = document.getElementById('success-message-region');
+            if (!successRegion) {
+                successRegion = document.createElement('div');
+                successRegion.id = 'success-message-region';
+                successRegion.setAttribute('role', 'status');
+                successRegion.setAttribute('aria-live', 'polite');
+                successRegion.setAttribute('aria-atomic', 'true');
+                successRegion.className = 'success-message';
+                document.body.appendChild(successRegion);
+            }
+            
+            // Показываем сообщение об успехе
+            successRegion.textContent = 'Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.';
+            successRegion.style.display = 'block';
+            
+            // Закрываем модальное окно
+            contactModal.close();
+            form.reset();
+            
+            // Очистка всех ошибок
+            ['name', 'phone', 'email', 'category', 'message'].forEach(fieldId => {
+                clearFieldError(fieldId, `${fieldId}-error`);
+            });
+            
+            // Скрываем сообщение об успехе через 5 секунд
+            setTimeout(() => {
+                if (successRegion) {
+                    successRegion.textContent = '';
+                    successRegion.style.display = 'none';
+                }
+            }, 5000);
+        }
+
+        // Мобильное меню
+        const navToggler = document.querySelector('.nav__toggler');
+        const navList = document.getElementById('navList');
+        
+        if (navToggler && navList) {
+            navToggler.addEventListener('click', function() {
+                const isExpanded = navToggler.getAttribute('aria-expanded') === 'true';
+                navToggler.setAttribute('aria-expanded', !isExpanded);
+                navList.classList.toggle('nav__list--open');
+            });
+        }
+    </script>
+</body>
+</html>
